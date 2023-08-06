@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NaamNai - Login</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+    }
+
+    .login-container {
+      max-width: 400px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .blink {
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0% {
+        color: #ff6e7f;
+      }
+      50% {
+        color: #ffa0b2;
+      }
+      100% {
+        color: #ff6e7f;
+      }
+    }
+
+    .input-field {
+      margin-bottom: 20px;
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .login-button {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-button:hover {
+      background-color: #45a049;
+    }
+
+    .error-message {
+      position: absolute; /* Added position */
+      top: -25px; /* Added top value */
+      left: 0;
+      width: 100%;
+      color: #ff6e7f;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1><span class="blink">NaamNai</span></h1>
+    <form>
+      <input id="name" type="text" class="input-field" placeholder="Name">
+      <input id="password" type="password" class="input-field" placeholder="Password">
+      <button id="loginButton" type="submit" class="login-button">Login</button>
+      <div class="error-message">
+        <!-- Error message will be displayed here -->
+      </div>
+    </form>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+  <script>
+    
+
+    var btn = document.getElementById("loginButton") ;
+
+    btn.addEventListener('click',(e)=>{
+
+      e.preventDefault() ;
+
+      var name = document.getElementById("name").value ;
+
+      var password = document.getElementById("password").value ;
+
+      console.log("name: ",name,"password: ",password) ;
+
+    })
+
+
+
+  </script>
+  
+</body>
+</html>
